@@ -282,7 +282,6 @@ WHERE
 -- “Average Service” else print “Poor Service”. Note that there should be one rating per supplier.
 
 -- Analysis
-#===========
 -- join [rating -> order -> supplier_pricing -> supplier]
 -- supp_id, supp_name, order_infomration [ord_id], rating [order]
 -- average rating [] avg(), group_by supp_id [] -> rating [supplier]
@@ -297,7 +296,6 @@ WHERE
 	-- display_supplier_rating_details
 
 -- SQL Statement
-#================
 SELECT SUPP_ID, SUPP_NAME, AverageRating, 
 	CASE
 		WHEN AverageRating = 5 THEN 'Excellent Service'
@@ -347,6 +345,5 @@ END //
 
 
 -- Call Procedure
-#=================
 call DisplaySupplierRatingDetails();
 
